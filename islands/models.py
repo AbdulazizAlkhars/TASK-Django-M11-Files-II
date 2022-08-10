@@ -13,6 +13,7 @@ class IslandPhoto(models.Model):
 
 class Island(models.Model):
     name = models.CharField(max_length=30)
+    image = models.ImageField(upload_to='islands/', null=True)
 
     def __str__(self):
         return self.name
